@@ -3,76 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ab9b249d-0605-4eb6-b958-7a66716be365" name="Default" comment="begin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TowerDefense/GameWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/Alien.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/Asteroid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/BlackHole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/Comet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/Coordinate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/Effect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/Enemy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/GamePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/GameState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/ImageLoader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/Panel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/PathPoints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/PathPosition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/StarDust.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/Sun.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/SunSpot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/game/Tower.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/resources/Alien-Ship.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/resources/asteroid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/resources/blackhole.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/resources/comet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/resources/game_over.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/resources/menu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/resources/star_dust.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/resources/stars.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/resources/sun.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TowerDefense/resources/sun_spot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BackgroundRenderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BulletTower1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FrameCounter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ImageRenderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Renderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tower1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tower1Shoot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TowerAttribute.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Towers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vector2D.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Alien.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Asteroid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/BlackHole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Comet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Coordinate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Effect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Enemy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/GamePanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/ImageLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Panel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/PathPoints.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/PathPosition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/StarDust.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Sun.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/SunSpot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Tower.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/Alien-Ship.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/asteroid.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/blackhole.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/comet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/game_over.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/menu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/star_dust.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/stars.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/sun.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/sun_spot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Coordinate.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,12 +14,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameCanvas.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
+    <leaf>
+      <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/base/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -127,8 +58,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -141,11 +70,19 @@
               <item name="TowerDefense" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TowerDefense" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TowerDefense" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534064955590</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="begin">
+      <created>1534131034571</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1534131034571</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -273,8 +217,8 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021962" side_tool="true" visible="true" weight="0.32913387" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978038" weight="0.32913387" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49707174" weight="0.32913387" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.4978038" visible="true" weight="0.32913387" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -283,25 +227,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49926794" weight="0.32913387" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49926794" weight="0.32913387" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="begin" />
     <MESSAGE value="1 enemy di chuyển 1 tower shoot" />
     <MESSAGE value="update 1 enemy tower bắn" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 1 enemy tower bắn" />
+    <MESSAGE value="begin" />
+    <option name="LAST_COMMIT_MESSAGE" value="begin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -309,27 +253,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java" />
+    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java" />
+    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java" />
     <entry file="file://$PROJECT_DIR$/src/GameCanvas.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/game/Asteroid.java" />
@@ -341,10 +267,11 @@
     <entry file="file://$PROJECT_DIR$/src/game/Enemy.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/FrameCounter.java" />
-    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java">
+    <entry file="file://$PROJECT_DIR$/src/GameCanvas.java" />
+    <entry file="file://$PROJECT_DIR$/src/base/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
