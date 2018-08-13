@@ -1,5 +1,6 @@
 
 import base.GameObjManager;
+import game.CreateAlien;
 import game.background.Background;
 import game.enemy.CreateEnemy;
 
@@ -21,7 +22,7 @@ public class GameCanvas extends JPanel {
     private Graphics graphics;
 
     private Random random = new Random();
-
+    public CreateAlien createAlien = new CreateAlien();
 
     public GameCanvas() {
 
@@ -42,9 +43,8 @@ public class GameCanvas extends JPanel {
     }
 
     private void setupCharacter() {
-         GameObjManager.instance.add(new Background());
-        GameObjManager.instance.add(new CreateEnemy());
-     
+        GameObjManager.instance.add(new Background());
+
         GameObjManager.instance.add(new Tower());
 
     }
@@ -57,23 +57,14 @@ public class GameCanvas extends JPanel {
     public void renderAll() {
 
         GameObjManager.instance.renderAll(graphics);
-       
-        graphics.setColor(Color.BLUE);
+        createAlien.render(graphics);
 
-        graphics.drawLine(0, 300, 200, 300);
-        graphics.drawLine(200, 300, 200, 500);
-        graphics.drawLine(200, 500, 400, 500);
-        graphics.drawLine(400, 500, 400, 100);
-        graphics.drawLine(400, 100, 700, 100);
-        graphics.drawLine(700, 100, 700, 300);
-        graphics.drawLine(700, 300, 1024, 300);
-        
         this.repaint();
     }
 
     public void runAll() {
-
+        createAlien.run();
         GameObjManager.instance.runAll();
-     
+
     }
 }
