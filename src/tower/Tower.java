@@ -20,7 +20,7 @@ public class Tower extends TowersObject {
 
     public Tower() {
         position.set(300, 400);
-        this.renderer = new ImageRenderer("D:\\New folder\\TowerDefenseVer\\src\\resources\\images\\circle.png", 30, 30);
+        this.renderer = new ImageRenderer("src\\resources\\images\\circle.png", 30, 30);
         this.attributes.add(new TowerShoot());
         this.boxCollider = new BoxCollider(20, 20);
     }

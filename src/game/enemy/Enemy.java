@@ -17,7 +17,7 @@ public class Enemy extends GameObject {
     public BoxCollider boxCollider;
 
     public Enemy() {
-        this.renderer = new ImageRenderer("D:\\New folder\\TowerDefenseVer\\src\\resources\\images\\circle.png", 20, 20);
+        this.renderer = new ImageRenderer("src\\resources\\images\\circle.png", 20, 20);
         this.velocity = new Vector2D();
 
         this.boxCollider = new BoxCollider(20, 20);
