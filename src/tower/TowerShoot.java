@@ -5,30 +5,28 @@
  */
 package tower;
 
+import base.Attribute;
 import base.FrameCounter;
 import base.GameObjManager;
+import base.GameObject;
 import base.Vector2D;
 
 /**
  *
  * @author Hiep Nguyen
  */
-public class TowerShoot extends TowersObject implements TowerAttribute<Tower> {
+public class TowerShoot extends GameObject implements Attribute<Tower> {
 
-    private FrameCounter frameCounter = new FrameCounter(30);
-
-
+    private FrameCounter frameCounter = new FrameCounter(100);
 
     public void run(Tower tower) {
-           if (this.frameCounter.run()) {
-       
-                BulletTower bulletTower = new BulletTower();
-                bulletTower.position.set(tower.position);
-                bulletTower.velocity.set(2,0);
-                GameObjManager.instance.add(bulletTower);
-        this.frameCounter.reset();
-           }
-    
-        
+        if (this.frameCounter.run()) {
+            BulletTower bulletTower = new BulletTower();
+            bulletTower.position.set(tower.position);
+            bulletTower.velocity.set(-1, 0);
+            GameObjManager.instance.add(bulletTower);
+            this.frameCounter.reset();
+        }
+
     }
 }

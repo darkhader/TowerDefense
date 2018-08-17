@@ -6,6 +6,11 @@
 package physics;
 
 import base.Vector2D;
+import game.enemy.Coordinate;
+import game.enemy.PathPoints;
+import game.enemy.PathPosition;
+import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Rectangle;
 
 /**
@@ -13,28 +18,34 @@ import java.awt.Rectangle;
  * @author Hiep Nguyen
  */
 public class BoxCollider {
+
     public Vector2D position;
     private int width;
     private int height;
+    private Graphics graphics;
 
     public BoxCollider(int width, int height) {
         this.position = new Vector2D();
         this.width = width;
         this.height = height;
     }
-    public boolean checkCollision(BoxCollider other){
-        Rectangle r1 =new Rectangle((int) this.position.x,
+
+    public boolean checkCollision(BoxCollider other) {
+
+        Rectangle r1 = new Rectangle((int) this.position.x,
                 (int) this.position.y,
                 this.width,
                 this.height
         );
-        Rectangle r2 =new Rectangle((int) other.position.x,
+
+        Rectangle r2 = new Rectangle((int) other.position.x,
                 (int) other.position.y,
                 other.width,
                 other.height
         );
+       
         return r1.intersects(r2);
-    }
-        
+
     }
 
+}

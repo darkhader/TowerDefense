@@ -1,6 +1,9 @@
 package base;
 
 
+import game.enemy.Alien;
+
+import game.enemy.Enemy;
 import java.awt.Color;
 
 import java.awt.Graphics;
@@ -8,7 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import physics.BoxCollider;
-import tower.TowersObject;
+import tower.BulletTower;
+
 
 /**
  *
@@ -18,17 +22,18 @@ public class GameObjManager {
 
     public List<GameObject> list;
     public List<GameObject> templeList;
-    public List<TowersObject> templeListT;
-    public List<TowersObject> listT;
+  
+ 
 
     static public GameObjManager instance = new GameObjManager();
 
 
     public GameObjManager() {
         list = new ArrayList<>();
-        listT = new ArrayList<>();
+
         templeList = new ArrayList<>();
-        templeListT = new ArrayList<>();
+
+    
 
     }
 
@@ -37,30 +42,34 @@ public class GameObjManager {
        
 
     }
-    public void add(TowersObject tower) {
-        this.templeListT.add(tower);
-       
-
-    }
+  
+ 
 
     public void runAll() {
         list.stream().filter(GameObj -> GameObj.isAlive).forEach(GameObj -> GameObj.run());
-        list.addAll(this.templeList);
+        list.addAll(templeList);
 
         templeList.clear();
-        
-        
-        listT.stream().filter(tower -> tower.isAlive).forEach(tower -> tower.run());
-        listT.addAll(this.templeListT);
-
-        templeListT.clear();
 
     }
 
     public void renderAll(Graphics graphics) {
 
         list.stream().filter(GameObj -> GameObj.isAlive).forEach(GameObj -> GameObj.render(graphics));
-        listT.stream().filter(GameObj -> GameObj.isAlive).forEach(GameObj -> GameObj.render(graphics));
+ 
     }
+    public BulletTower checkCollision(Enemy enemy){
+          return (BulletTower) this.list.stream()
+                .filter(GameObj -> GameObj.isAlive)
+                .filter(gameObject -> gameObject instanceof BulletTower)
+                .filter(gameObject -> {
+                    BoxCollider other = ((BulletTower) gameObject).boxCollider;
+                    return enemy.boxCollider.checkCollision(other);
+                })
+                .findFirst()
+                .orElse(null);
+          
+    }
+    
 
 }

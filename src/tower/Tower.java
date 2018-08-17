@@ -6,6 +6,7 @@
 package tower;
 
 import base.GameObjManager;
+import base.GameObject;
 import physics.BoxCollider;
 import renderer.ImageRenderer;
 
@@ -13,16 +14,16 @@ import renderer.ImageRenderer;
  *
  * @author Hiep Nguyen
  */
-public class Tower extends TowersObject {
+public class Tower extends GameObject {
 
   
     public BoxCollider boxCollider;
 
     public Tower() {
-        position.set(300, 400);
+        position.set(500, 400);
         this.renderer = new ImageRenderer("src\\resources\\images\\circle.png", 30, 30);
         this.attributes.add(new TowerShoot());
-        this.boxCollider = new BoxCollider(20, 20);
+        
     }
 
     @Override

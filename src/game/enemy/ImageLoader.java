@@ -1,4 +1,4 @@
-package game;
+package game.enemy;
 
 import java.awt.Image;
 import java.io.IOException;

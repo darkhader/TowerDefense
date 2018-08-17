@@ -1,4 +1,4 @@
-package game;
+package game.enemy;
 /**
 * A simple class for representing x, y coordinates.  Note
 * that the fields are not private.  This allows you to
@@ -10,18 +10,9 @@ package game;
 */
 public class Coordinate
 {
-    // Every object will have an x, y integer.
-	
+
 	public int x, y;
-	
-	/**
-    * Constructor - initializes this object with the provided coordinates.
-    * Since the fields are final, they won't be able to be changed
-    * after they are first assigned (below)
-    * 
-    * @param x
-    * @param y
-    */
+
 	public Coordinate(int x, int y)
 	{
 		this.x = x;
