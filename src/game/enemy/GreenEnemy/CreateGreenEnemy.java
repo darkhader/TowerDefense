@@ -31,4 +31,7 @@ public class CreateGreenEnemy extends GameObject {
         }
     }
 
+    //tạo greenEnemy rồi add vào instance
+
+
 }

@@ -25,49 +25,40 @@ public class EnemyMove {
     }
 
     public boolean isAtTheEndOfPath() {
-
+        //kiểm tra nếu đã đến cuối Path hiện tại chưa
         return (Math.abs(endX - this.position.x) <= 3 && Math.abs(endY - this.position.y) <= 3);
 
     }
 
     public boolean isAtTheEnd() {
-
+        //kiểm tra nếu đã đến hết đường
         return index == path.size() - 1;
 
     }
 
     public void getPath() {
-        startX = (int) path.get(index).x;
-        endX = (int) path.get(index + 1).x;
-
-        startY = (int) path.get(index).y;
-        endY = (int) path.get(index + 1).y;
-
+        //lấy ra startX, endX
+        startX = path.get(index).x;
+        endX = path.get(index + 1).x;
+        //lấy ra startY, endY
+        startY = path.get(index).y;
+        endY = path.get(index + 1).y;
+        //lấy khoảng cách X,Y
         dX = endX - startX;
         dY = endY - startY;
-
+        //cho index tăng lên 1
         index++;
     }
 
-//    private void rotateVelocity() {
-//        if (dX == 0) {
-//            angle = 90;
-//        }
-//        if (dY == 0) {
-//            angle = -90;
-//        } else {
-//            angle = Math.toDegrees(Math.tan(dY / dX));
-//        }
-//
-//        this.velocity.rotate(angle);
-//    }
-
     public void getVelocity() {
+        //xác định velocity
+        //ví dụ path bắt đầu từ 0,300 đến 300,300 thì velocity sẽ là (20, 0)
         this.velocity.x = dX / 15;
         this.velocity.y = dY / 15;
     }
 
     public void move() {
+        //cho chạy
         this.position.addUp(this.velocity);
 
     }

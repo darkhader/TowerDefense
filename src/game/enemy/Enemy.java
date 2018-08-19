@@ -56,6 +56,9 @@ public class Enemy extends GameObject {
             }
         }
 
+        //nếu enemy chưa chạy đến cuối đường thì chạy hàm if
+        //nếu enemy chưa chạy hết path hiện tại thì sẽ addUp velociy, còn nếu đã chạy hết thì getPath mới và getVelocity mới
+
 //        this.boxCollider.position.set(enemyMove.position.x, enemyMove.position.y);
 //            BulletTower bulletTower = GameObjManager.instance.checkCollision(this);
 //            if (bulletTower != null) {
