@@ -1,6 +1,7 @@
 
 import base.GameObjManager;
 
+import base.GameObject;
 import game.background.Background;
 import game.enemy.Enemy;
 
@@ -11,13 +12,13 @@ import java.io.InputStream;
 import java.util.Random;
 import java.util.Scanner;
 
+import game.enemy.GreenEnemy.CreateGreenEnemy;
+import game.map.Map;
 import tower.Tower;
 
 public class GameCanvas extends JPanel {
 
     private BufferedImage backBuffered;
-    private Background background = new Background();
-
     private Graphics graphics;
 
     private Random random = new Random();
@@ -42,9 +43,9 @@ public class GameCanvas extends JPanel {
 
     private void setupCharacter() {
         GameObjManager.instance.add(new Background());
-        GameObjManager.instance.add(new Enemy());
+        GameObjManager.instance.add(new Map());
+        GameObjManager.instance.add(new CreateGreenEnemy());
         GameObjManager.instance.add(new Tower());
-
     }
 
     @Override

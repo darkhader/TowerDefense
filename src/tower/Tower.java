@@ -21,7 +21,7 @@ public class Tower extends GameObject {
 
     public Tower() {
         position.set(500, 400);
-        this.renderer = new ImageRenderer("src\\resources\\images\\circle.png", 30, 30);
+        this.renderer = new ImageRenderer("Tower Defense (top-down)/PNG/Default size/tower1.png", 40, 40);
         this.attributes.add(new TowerShoot());
         
     }

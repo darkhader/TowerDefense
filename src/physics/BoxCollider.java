@@ -6,10 +6,7 @@
 package physics;
 
 import base.Vector2D;
-import game.enemy.Coordinate;
-import game.enemy.PathPoints;
-import game.enemy.PathPosition;
-import java.awt.Color;
+
 import java.awt.Graphics;
 import java.awt.Rectangle;
 

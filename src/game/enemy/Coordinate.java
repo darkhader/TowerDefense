@@ -19,21 +19,13 @@ public class Coordinate
 		this.y = y;
 	}
 
-	/**
-	 * Get X coordinate
-	 * 
-	 * @return X coordinate
-	 */
+
 	public int getX()
 	{
 		return this.x; 
 	}
 	
-	/**
-	 * Get Y coordinate
-	 * 
-	 * @return Y coordinate
-	 */
+
 	public int getY()
 	{
 		return this.y; 

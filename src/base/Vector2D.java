@@ -5,6 +5,18 @@ public class Vector2D {
     public float x;
     public float y;
 
+    public int getX() {
+        return (int)this.x;
+    }
+
+    public int getY() {
+        return (int)this.y;
+    }
+
+    public String toString() {
+        return (" " + x + " " + y);
+    }
+
     public Vector2D(float x, float y) {
         this.x = x;
         this.y = y;
