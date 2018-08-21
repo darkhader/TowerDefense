@@ -1,42 +1,45 @@
 package base;
 
+import action.Action;
 import java.awt.Graphics;
 import java.util.ArrayList;
-
-import action.Action;
 import renderer.Renderer;
 
 import java.util.List;
+import java.util.Random;
 
 
 public class GameObject {
-    
+
     public Vector2D position;
-    public boolean isAlive = true;
+
     public Renderer renderer;
-    public List<Attribute> attributes=new ArrayList<>();
+
+    public List<Attribute> attributes;
+
+    public boolean isAlive = true;
+    public boolean inAction = false;
     public List<Action> actions;
- 
-    
+      public Random random = new Random();
+
     public GameObject() {
         this.position = new Vector2D();
+        this.attributes = new ArrayList<>();
         this.actions = new ArrayList<>();
     }
-    
+
     public void run() {
-        this.attributes.forEach(attribute -> attribute.run(this));
-        //this.actions.removeIf(action -> action.run(this));
-    }
-    
-    public void render(Graphics graphics) {
-        if (this.renderer != null) {
-            this.renderer.render(graphics, this.position);
-        }
+        this.attributes
+                .forEach(attribute -> attribute.run(this));
+        actions.removeIf(action -> action.run(this));
     }
 
-    public void addAction(Action action) {
+    public void render(Graphics graphics) {
+        if (this.renderer != null)
+            this.renderer.render(graphics, this.position);
+    }
+    public void addAction(Action action){
         this.actions.add(action);
     }
-
-
 }
+

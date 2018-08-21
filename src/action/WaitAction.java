@@ -1,8 +1,17 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package action;
 
 import base.FrameCounter;
 import base.GameObject;
 
+/**
+ *
+ * @author Hiep Nguyen
+ */
 public class WaitAction implements Action {
 
     private FrameCounter frameCounter;
@@ -11,13 +20,14 @@ public class WaitAction implements Action {
         this.frameCounter = new FrameCounter(timeInterval);
     }
 
-    @Override
+   
     public boolean run(GameObject owner) {
         return this.frameCounter.run();
     }
 
-    @Override
+   
     public void reset() {
         this.frameCounter.reset();
     }
+
 }
