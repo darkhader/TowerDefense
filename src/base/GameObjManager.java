@@ -9,6 +9,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import tower.MachineGun;
+import tower.Tinker;
 
 public class GameObjManager {
 
@@ -48,7 +49,7 @@ public class GameObjManager {
                 .stream()
                 .filter(gameObject -> gameObject.isAlive)
                 .filter(gameObject -> gameObject instanceof Alien)
-                .filter(gameObject -> gameObject.inAction)
+                .filter(gameObject -> gameObject.inAction1)
                 .findFirst()
                 .orElse(null);
     }
@@ -57,7 +58,25 @@ public class GameObjManager {
                 .stream()
                 .filter(gameObject -> gameObject.isAlive)
                 .filter(gameObject -> gameObject instanceof Meteor)
-                .filter(gameObject -> gameObject.inAction)
+                .filter(gameObject -> gameObject.inAction1)
+                .findFirst()
+                .orElse(null);
+    }
+    public Alien findAlien2() {
+        return (Alien) this.list
+                .stream()
+                .filter(gameObject -> gameObject.isAlive)
+                .filter(gameObject -> gameObject instanceof Alien)
+                .filter(gameObject -> gameObject.inAction2)
+                .findFirst()
+                .orElse(null);
+    }
+    public Meteor findMeteor2() {
+        return (Meteor) this.list
+                .stream()
+                .filter(gameObject -> gameObject.isAlive)
+                .filter(gameObject -> gameObject instanceof Meteor)
+                .filter(gameObject -> gameObject.inAction2)
                 .findFirst()
                 .orElse(null);
     }
@@ -67,6 +86,13 @@ public class GameObjManager {
                 .stream()
                 .filter(gameObject -> gameObject.isAlive)
                 .filter(gameObject -> gameObject instanceof MachineGun)
+                .findFirst()
+                .orElse(null);
+    }
+    public Tinker findTinker(){
+        return (Tinker) this.list.stream()
+                .filter(gameObject ->gameObject.isAlive)
+                .filter(gameObject -> gameObject instanceof Tinker)
                 .findFirst()
                 .orElse(null);
     }

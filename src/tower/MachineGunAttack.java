@@ -22,7 +22,7 @@ public class MachineGunAttack implements Attribute<MachineGun> {
 
 
     public MachineGunAttack() {
-        this.frameCounter = new FrameCounter(10);
+        this.frameCounter = new FrameCounter(5);
 
     }
 

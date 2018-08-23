@@ -8,4 +8,5 @@ public interface PhysicBody {
 
     void getHit(GameObject gameObject);
     void getInsight(GameObject gameObject);
+    
 }

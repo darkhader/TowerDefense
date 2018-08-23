@@ -10,6 +10,7 @@ import base.Vector2D;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import player.PlayerBuild;
 
 /**
  *
@@ -22,12 +23,14 @@ public class KeyBoardInput implements KeyListener {
     public boolean isUp = false;
     public boolean isDown = false;
     public boolean isSpace = false;
-    private FrameCounter frameCounter = new FrameCounter(100);
+    public boolean is1 = false;
+    public boolean is2 = false;
+
     static public KeyBoardInput instance = new KeyBoardInput();
 
     @Override
     public void keyTyped(KeyEvent e) {
-     
+
     }
 
     @Override
@@ -42,15 +45,21 @@ public class KeyBoardInput implements KeyListener {
         }
 
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            //  defaultVelocity = defaultVelocity.multiply(2);
+            
             isUp = true;
         }
         if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            //  defaultVelocity = defaultVelocity.multiply(2);
+           
             isDown = true;
         }
-        if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-            isSpace = true;
+        if (e.getKeyCode() == KeyEvent.VK_Z) {
+
+            is1 = true;
+
+        }
+        if (e.getKeyCode() == KeyEvent.VK_X) {
+
+            is2 = true;
 
         }
 
@@ -77,6 +86,14 @@ public class KeyBoardInput implements KeyListener {
         if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 
             isSpace = false;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_Z) {
+            PlayerBuild.instance.n = 1;
+            is1 = false;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_X) {
+            PlayerBuild.instance.m = 1;
+            is2 = false;
         }
     }
 }

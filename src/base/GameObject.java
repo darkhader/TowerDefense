@@ -18,7 +18,8 @@ public class GameObject {
     public List<Attribute> attributes;
 
     public boolean isAlive = true;
-    public boolean inAction = false;
+    public boolean inAction1 = false;
+    public boolean inAction2 = false;
     public List<Action> actions;
       public Random random = new Random();
 

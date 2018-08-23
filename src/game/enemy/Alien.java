@@ -15,6 +15,7 @@ import player.Player;
 import renderer.ImageRenderer;
 import tower.BulletMachineGun;
 import tower.MachineGun;
+import tower.Tinker;
 
 /**
  *
@@ -23,26 +24,26 @@ import tower.MachineGun;
 public class Alien extends GameObject implements PhysicBody {
     
     public Vector2D velocity;
-    
+    private int count = 5;
     public BoxCollider boxCollider;
     public FrameCounter frameCounter1 = new FrameCounter(
             this.random.nextInt(10) + 
-                    90);//300
+                    95);//300
     public FrameCounter frameCounter2 = new FrameCounter(
             this.random.nextInt(10) +
                     56);//200
     public FrameCounter frameCounter3 = new FrameCounter(
-            this.random.nextInt(10) +
-                    68);//200
+            this.random.nextInt(7) +
+                    65);//200
     public FrameCounter frameCounter4 = new FrameCounter(
             this.random.nextInt(10) + 
-                    120);//400
+                    123);//400
     public FrameCounter frameCounter5 = new FrameCounter(
             this.random.nextInt(5) +
-                    100);//300
+                    103);//300
     public FrameCounter frameCounter6 = new FrameCounter(
             this.random.nextInt(5) + 
-                    55);//200
+                    60);//200
 
     public Alien() {
         this.velocity = new Vector2D();
@@ -56,7 +57,7 @@ public class Alien extends GameObject implements PhysicBody {
         this.position.addUp(this.velocity);
         this.getInsight(this);
         this.boxCollider.position.set(this.position.x - 10, this.position.y - 10);
-        if (this.position.x > 1024) {
+        if (this.position.x > 1000) {
             this.isAlive = false;
         }
         
@@ -85,7 +86,10 @@ public class Alien extends GameObject implements PhysicBody {
     
     @Override
     public void getHit(GameObject gameObject) {
-        this.isAlive = false;
+           count--;
+         if (count == 0) {
+            this.isAlive = false;
+        }
     }
     
     @Override
@@ -99,10 +103,19 @@ public class Alien extends GameObject implements PhysicBody {
         if (machine != null) {
             if (Math.sqrt(Math.pow((machine.position.x - this.position.x), 2)
                     + Math.pow((machine.position.y - this.position.y), 2)) <100) {
-                this.inAction = true;
-            }else this.inAction=false;
+                this.inAction1 = true;
+            }else this.inAction1=false;
             
         }
-
+   Tinker tinker = GameObjManager.instance.findTinker();
+        if (tinker != null) {
+            if (Math.sqrt(Math.pow((tinker.position.x - this.position.x), 2)
+                    + Math.pow((tinker.position.y - this.position.y), 2)) < 200) {
+                this.inAction2 = true;
+            } else {
+                this.inAction2 = false;
+            }
+            
+        }
     }
 }
