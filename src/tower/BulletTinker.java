@@ -31,11 +31,12 @@ public class BulletTinker extends GameObject implements PhysicBody {
 
     public BulletTinker() {
         this.velocity = new Vector2D();
-        this.renderer = new ImageRenderer("src\\resources\\images\\fire.png", 5, 5);
+        this.renderer = new ImageRenderer("resources/images/fire.png", 5, 5);
         this.boxCollider = new BoxCollider(5, 5);
         this.runHitObject = new RunHitObject(Alien.class);
         this.runHitObject1 = new RunHitObject(Meteor.class);
         this.frameCounter = new FrameCounter(50);
+        this.damage = 1;
 
     }
 
@@ -51,14 +52,14 @@ public class BulletTinker extends GameObject implements PhysicBody {
         Alien alien = GameObjManager.instance.findAlien2();
         Meteor meteor = GameObjManager.instance.findMeteor2();
         if (alien != null && meteor == null) {
-            this.updateVelo();
+            this.updateVelocity();
         }
 
         if (meteor != null && alien == null) {
-            this.updateVelo();
+            this.updateVelocity();
         }
         if (alien != null && meteor != null) {
-            this.updateVelo();
+            this.updateVelocity();
         }
         if (frameCounter.run()) {
             this.isAlive = false;
@@ -66,7 +67,7 @@ public class BulletTinker extends GameObject implements PhysicBody {
         }
     }
 
-    public void updateVelo() {
+    public void updateVelocity() {
         
         this.velocity.set(random.nextInt(3) - 3, random.nextInt(3) - 1);
         if (count == 4) {
@@ -90,6 +91,7 @@ public class BulletTinker extends GameObject implements PhysicBody {
 
     @Override
     public void getHit(GameObject gameObject) {
+        //gameObject.health -= this.damage;
         count--;
         if (count == 0) {
             this.isAlive = false;

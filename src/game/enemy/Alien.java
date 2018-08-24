@@ -27,7 +27,7 @@ public class Alien extends GameObject implements PhysicBody {
     private int count = 5;
     public BoxCollider boxCollider;
     public FrameCounter frameCounter1 = new FrameCounter(
-            this.random.nextInt(10) + 
+            this.random.nextInt(10) +
                     95);//300
     public FrameCounter frameCounter2 = new FrameCounter(
             this.random.nextInt(10) +
@@ -36,19 +36,21 @@ public class Alien extends GameObject implements PhysicBody {
             this.random.nextInt(7) +
                     65);//200
     public FrameCounter frameCounter4 = new FrameCounter(
-            this.random.nextInt(10) + 
+            this.random.nextInt(10) +
                     123);//400
     public FrameCounter frameCounter5 = new FrameCounter(
             this.random.nextInt(5) +
                     103);//300
     public FrameCounter frameCounter6 = new FrameCounter(
-            this.random.nextInt(5) + 
+            this.random.nextInt(5) +
                     60);//200
 
     public Alien() {
         this.velocity = new Vector2D();
-        this.renderer = new ImageRenderer("src\\resources\\images\\Alien-Ship.png", 20, 20);
+        this.renderer = new ImageRenderer("resources/images/Alien-Ship.png", 20, 20);
         this.boxCollider = new BoxCollider(20, 20);
+        this.damage = 1;
+        this.health = 5;
     }
     
     @Override
@@ -57,7 +59,7 @@ public class Alien extends GameObject implements PhysicBody {
         this.position.addUp(this.velocity);
         this.getInsight(this);
         this.boxCollider.position.set(this.position.x - 10, this.position.y - 10);
-        if (this.position.x > 1000) {
+        if (this.position.x > 1000||this.health <= 0) {
             this.isAlive = false;
         }
         
@@ -86,9 +88,10 @@ public class Alien extends GameObject implements PhysicBody {
     
     @Override
     public void getHit(GameObject gameObject) {
-           count--;
-         if (count == 0) {
+           this.health -= gameObject.damage;
+         if (health <= 0) {
             this.isAlive = false;
+            GameObjManager.instance.allEnemyDied ++;
         }
     }
     

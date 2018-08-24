@@ -23,7 +23,7 @@ public class MachineGun extends GameObject {
     
     public MachineGun(float x, float y) {
         this.position.set(x, y);
-        this.renderer = new ImageRenderer("src\\resources\\images\\machine_gun_PNG56.png", 30, 30);
+        this.renderer = new ImageRenderer("resources/images/machine_gun_PNG56.png", 30, 30);
         this.attributes.add(new MachineGunAttack());
     }
 

@@ -11,11 +11,9 @@ import base.GameObject;
 import base.Vector2D;
 import game.enemy.Alien;
 import game.enemy.Meteor;
-import java.awt.Graphics;
 import physic.BoxCollider;
 import physic.PhysicBody;
 import physic.RunHitObject;
-import player.Player;
 import renderer.ImageRenderer;
 
 /**
@@ -27,16 +25,17 @@ public class BulletMachineGun extends GameObject implements PhysicBody {
     public Vector2D velocity;
     private BoxCollider boxCollider;
     private RunHitObject runHitObject;
-    private RunHitObject runHitObject1;
+    private RunHitObject runHitObjectMeteor;
     private FrameCounter frameCounter;
 
     public BulletMachineGun() {
         this.velocity = new Vector2D();
-        this.renderer = new ImageRenderer("src\\resources\\images\\circle.png", 5, 5);
+        this.renderer = new ImageRenderer("resources/images/circle.png", 5, 5);
         this.boxCollider = new BoxCollider(5, 5);
         this.runHitObject = new RunHitObject(Alien.class);
-        this.runHitObject1 = new RunHitObject(Meteor.class);
+        this.runHitObjectMeteor = new RunHitObject(Meteor.class);
         this.frameCounter = new FrameCounter(10);
+        this.damage = 1;
 
     }
 
@@ -46,7 +45,7 @@ public class BulletMachineGun extends GameObject implements PhysicBody {
         this.position.addUp(this.velocity);
         this.boxCollider.position.set(this.position.x - 2.5f, this.position.y - 2.5f);
         this.runHitObject.run(this);
-        this.runHitObject1.run(this);
+        this.runHitObjectMeteor.run(this);
         this.velocity.set(0, 0);
         Alien alien = GameObjManager.instance.findAlien();
         Meteor meteor = GameObjManager.instance.findMeteor();

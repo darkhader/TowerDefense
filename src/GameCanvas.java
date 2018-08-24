@@ -28,7 +28,6 @@ public class GameCanvas extends JPanel {
 
     private Graphics graphics;
 
-
     private Random random = new Random();
 
     public GameCanvas() {
@@ -73,6 +72,8 @@ public class GameCanvas extends JPanel {
     public void runAll() {
      
         GameObjManager.instance.runAll();
+        System.out.print("Enemy Died:");
+        System.out.println(GameObjManager.instance.allEnemyDied);
 
     }
 

@@ -16,7 +16,7 @@ public class Tinker extends GameObject{
         
     public Tinker(float x, float y) {
         this.position.set(x, y);
-        this.renderer = new ImageRenderer("src\\resources\\images\\laser-gun.png", 30, 30);
+        this.renderer = new ImageRenderer("resources/images/laser-gun.png", 30, 30);
         this.attributes.add(new TinkerAttack());
     }
 

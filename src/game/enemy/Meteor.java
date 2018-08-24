@@ -47,6 +47,8 @@ public class Meteor extends GameObject implements PhysicBody {
         this.velocity = new Vector2D();
         this.renderer = new ImageRenderer("src\\resources\\images\\comet.png", 50, 50);
         this.boxCollider = new BoxCollider(50, 50);
+        this.damage = 2;
+        this.health = 10;
     }
     
     @Override
@@ -56,7 +58,7 @@ public class Meteor extends GameObject implements PhysicBody {
         this.getInsight(this);
         this.getHit1();
         this.boxCollider.position.set(this.position.x - 20, this.position.y - 20);
-        if (this.position.x > 1000) {
+        if (this.position.x > 1000||this.health <= 0) {
             this.isAlive = false;
         }
         
@@ -84,9 +86,10 @@ public class Meteor extends GameObject implements PhysicBody {
     
     @Override
     public void getHit(GameObject gameObject) {
-        count--;
-         if (count == 0) {
+        this.health -= gameObject.damage;
+        if (health <= 0) {
             this.isAlive = false;
+            GameObjManager.instance.allEnemyDied ++;
         }
     }
     

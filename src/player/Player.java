@@ -20,7 +20,7 @@ public class Player extends GameObject {
 
     public Player() {
         this.velocity = new Vector2D();
-        this.renderer = new ImageRenderer("src\\resources\\images\\circle.png", 20, 20);
+        this.renderer = new ImageRenderer("resources/images/circle.png", 20, 20);
 
         this.attributes.add((Attribute) new PlayerMove());
         this.attributes.add((Attribute) new PlayerBuild());

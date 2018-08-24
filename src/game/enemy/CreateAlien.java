@@ -33,7 +33,7 @@ public class CreateAlien extends GameObject {
                                 new ActionAdapter() {
                             public boolean run(GameObject owner) {
                                 Alien alien = new Alien();
-                                alien.position.set(0, random.nextInt(40)+280);
+                                alien.position.set(0, random.nextInt(30)+270);
                                 GameObjManager.instance.add(alien);
                                 return true; 
                             }

@@ -5,7 +5,6 @@
  */
 package game.Earth;
 
-import base.GameObjManager;
 import base.GameObject;
 import game.enemy.Alien;
 import game.enemy.Meteor;
@@ -21,22 +20,26 @@ import renderer.ImageRenderer;
 public class Earth extends GameObject implements PhysicBody {
 
     private BoxCollider boxCollider;
-    private RunHitObject runHitObject;
-    private RunHitObject runHitObject1;
+    private RunHitObject runHitObjectAlien;
+    private RunHitObject runHitObjectMeteor;
+    public int enemyDiedOnEarth = 0;
 
     public Earth() {
         
-        this.renderer = new ImageRenderer("src\\resources\\images\\worldwide.png", 150, 150);
+        this.renderer = new ImageRenderer("resources/images/worldwide.png", 150, 150);
         this.boxCollider = new BoxCollider(150, 150);
-        this.runHitObject = new RunHitObject(Alien.class);
-        this.runHitObject1 = new RunHitObject(Meteor.class);
+        this.runHitObjectAlien = new RunHitObject(Alien.class);
+        this.runHitObjectMeteor = new RunHitObject(Meteor.class);
+        this.health = 200;
     }
 
     public void run() {
         super.run();     
         this.boxCollider.position.set(this.position.x - 75, this.position.y - 75);
-        this.runHitObject.run(this);
-        this.runHitObject1.run(this);
+        this.runHitObjectAlien.run(this);
+        this.runHitObjectMeteor.run(this);
+        System.out.print("Enemy Died On Earth:");
+        System.out.println(this.enemyDiedOnEarth);
     }
 
     @Override
@@ -46,7 +49,11 @@ public class Earth extends GameObject implements PhysicBody {
 
     @Override
     public void getHit(GameObject gameObject) {
-        this.isAlive = true;
+        this.health -= gameObject.damage;
+        enemyDiedOnEarth ++;
+        if (this.health <= 0) {
+            this.isAlive = false;
+        }
         gameObject.isAlive=false;
     }
 

@@ -17,6 +17,7 @@ public class GameObjManager {
 
     private List<GameObject> list;
     private List<GameObject> tempList;
+    public int allEnemyDied = 0;
 
     private GameObjManager() {
         this.list = new ArrayList<>();
